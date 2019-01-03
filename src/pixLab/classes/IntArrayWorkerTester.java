@@ -5,7 +5,7 @@ public class IntArrayWorkerTester
   public static void testSetMatrix()
   {
     IntArrayWorker worker = new IntArrayWorker();
-    int[][] nums = {{1, 1, 1} ,{2,2,2}};
+    int[][] nums = {{1, 1, 1, 1} ,{2,2,2,2}};
     worker.setMatrix(nums);
     System.out.println("This should have all 1's in first row and all 2's in second");
     worker.print();
@@ -15,7 +15,7 @@ public class IntArrayWorkerTester
   public static void testFillPattern1()
   {
     IntArrayWorker worker = new IntArrayWorker();
-    int[][] nums = new int[3][4];
+    int[][] nums = new int[10][10];
     worker.setMatrix(nums);
     worker.fillPattern1();
     System.out.println("fills with 2's on diagonal, 3's to left, and 1's to right");
@@ -23,15 +23,15 @@ public class IntArrayWorkerTester
   }
   
   /** Method to test getCount*/
-//  public static void testGetCount()
-//  {
-//    IntArrayWorker worker = new IntArrayWorker();
-//    int[][] nums = new int[3][4];
-//    worker.setMatrix(nums);
-//    worker.fillPattern1();
-//    int count = worker.getCount(1);
-//    System.out.println("Count should be 6 and count is " + count);
-//  }
+  public static void testGetCount()
+  {
+    IntArrayWorker worker = new IntArrayWorker();
+    int[][] nums = new int[3][4];
+    worker.setMatrix(nums);
+    worker.fillPattern1();
+    int count = worker.getCount(1);
+    System.out.println("Count should be 6 and count is " + count);
+  }
   
   /** Method to test getTotal */
   public static void testGetTotal()
@@ -79,8 +79,8 @@ public class IntArrayWorkerTester
 //  }
   
   /** Method to test getColTotal */
-//  public static void testGetColTotal()
-//  {
+  public static void testGetColTotal()
+  {
 //    IntArrayWorker worker = new IntArrayWorker();
 //    int [][] nums2 = {{1, 2, 3}, {4, 5, 6}};
 //    worker.setMatrix(nums2);
@@ -90,13 +90,13 @@ public class IntArrayWorkerTester
 //    System.out.println("Total for column 1 should be 7 and is " + total);
 //    total = worker.getColTotal(2);
 //    System.out.println("Total for column 2 should be 9 and is " + total);
-//  }
+  }
   
   public static void main(String[] args)
   {
     testSetMatrix();
     testFillPattern1();
-    //testGetCount(); 
+    testGetCount(); 
     testGetTotal();
     testGetTotalNested();
     //testGetLargest();

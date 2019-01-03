@@ -12,19 +12,39 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
+    Picture beach = new Picture("heatmiser.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
+  }
+  public static void testZeroRed()
+  {
+	  Picture hotHead = new Picture("heatmiser.jpg");
+	//  hotHead.explore();
+	  hotHead.zeroRed();
+	  hotHead.explore();
+  }
+  public static void greenOnly()
+  {
+	  Picture hot = new Picture("heatmiser.jpg");
+	  hot.zeroBlue();
+	  hot.zeroRed();
+	  hot.explore();
   }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("heatmiser.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
+  }
+  public static void testMirrorVertical2()
+  {
+	  Picture hm = new Picture("heatmiser.jpg");
+	  hm.mirrorVertical2();
+	  hm.explore();
   }
   
   /** Method to test mirrorTemple */
@@ -59,14 +79,17 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-    testZeroBlue();
+    //testZeroBlue();
+	//greenOnly();
+    //testZeroRed();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
-    testMirrorVertical();
+    //testMirrorVertical();
+     testMirrorVertical2();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
