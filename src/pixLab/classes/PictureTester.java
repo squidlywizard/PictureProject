@@ -12,7 +12,7 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("heatmiser.jpg");
+    Picture beach = new Picture("seagull.jpg");
     beach.explore();
     beach.zeroBlue();
     beach.explore();
@@ -46,6 +46,12 @@ public class PictureTester
 	  hm.mirrorVertical2();
 	  hm.explore();
   }
+  public static void testMirrorHorizontal()
+  {
+	  Picture trum = new Picture("heatmiser.jpg");
+	  trum.mirrorHorizontal();
+	  trum.explore();
+  }
   
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
@@ -71,6 +77,19 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
+  public static void testglitch()
+  {
+	  Picture miser = new Picture ("heatmiser.jpg");
+	  for(int I = 100; I>0;I --) {
+	  miser.glichy();}
+	  
+	  
+	
+	 
+	  
+	  miser.explore();
+  }
+ 
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -79,6 +98,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+	  testglitch();
     //testZeroBlue();
 	//greenOnly();
     //testZeroRed();
@@ -89,7 +109,8 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-     testMirrorVertical2();
+     //testMirrorVertical2();
+    // testMirrorHorizontal();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
