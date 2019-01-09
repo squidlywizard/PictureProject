@@ -1,4 +1,7 @@
 package pixLab.classes;
+import java.awt.*;
+
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -79,15 +82,24 @@ public class PictureTester
   }
   public static void testglitch()
   {
-	  Picture miser = new Picture ("heatmiser.jpg");
+	  Picture miser = new Picture ("dominos.jpeg");
 	  for(int I = 100; I>0;I --) {
-	  miser.glichy();}
+	  miser.glichy();
+	  }
 	  
 	  
 	
 	 
 	  
 	  miser.explore();
+  }
+  public static void testChromakey()
+  {
+	  Picture source = new Picture("spurdo.jpg");
+	  Picture background = new Picture("sburdo.png");
+	 // source.chromakey(background, Color.WHITE);
+	  //source.explore();
+	  background.explore();
   }
  
   
@@ -98,7 +110,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	  testglitch();
+	  //testglitch();
     //testZeroBlue();
 	//greenOnly();
     //testZeroRed();
@@ -119,7 +131,7 @@ public class PictureTester
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
-    //testChromakey();
+    testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();

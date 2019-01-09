@@ -118,6 +118,23 @@ public class Picture extends SimplePicture
 			}
 		}
 	}
+	public void chromakey(Picture replacment, Color changeColor)
+	{
+		Pixel [][] mainPixels = this.getPixels2D();
+		Pixel [][] replacementPixels = replacment.getPixels2D();
+		
+		for (int row = 0; row<mainPixels.length; row ++)
+		{
+			for(int col = 0; col <mainPixels[0].length;col++)
+			{
+				if(mainPixels[row][col].colorDistance(changeColor) < 10)
+				{
+					mainPixels[row][col].setColor(replacementPixels[row][col].getColor());
+				}
+					
+			}
+		}
+				}
 
 	public void glichy()
 	{
@@ -127,7 +144,7 @@ public class Picture extends SimplePicture
 		Pixel leftPixel = null;
 		Pixel rightPixel = null;
 		// loop through the rows
-
+        
 		for (int row = (int) (pixels.length - (Math.random() * pixels.length)); row < pixels.length; row++)
 		{
 			// loop from 13 to just before the mirror point
@@ -145,12 +162,12 @@ public class Picture extends SimplePicture
 				rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
 				}
 				
-				//rightPixel.setColor(leftPixel.getColor());
-				rightPixel.setRed(leftPixel.getRed());
+				rightPixel.setColor(leftPixel.getColor());}
+				
 			}
 		}
 
-	}
+	
 
 	/**
 	 * Method that mirrors the picture around a vertical mirror in the center of the
