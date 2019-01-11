@@ -135,10 +135,11 @@ public class Picture extends SimplePicture
 			}
 		}
 				}
-
+    Picture zalgoat = new Picture ("zalgo.jpg");
 	public void glichy()
 	{
 		Pixel[][] pixels = this.getPixels2D();
+		Pixel[][] zalgo = zalgoat.getPixels2D();
 
 		int mirrorPoint = (int) (pixels.length/2 - (Math.random() * pixels.length / 2));
 		Pixel leftPixel = null;
@@ -167,6 +168,32 @@ public class Picture extends SimplePicture
 			}
 		}
 
+	public void shiftUpDown(int amount)
+	{
+		Pixel [][] pixels = this.getPixels2D();
+		Picture temp = new Picture(this);
+		Pixel [][] copied = temp.getPixels2D();
+		
+		int shiftedValue = amount;
+		int height = pixels.length;
+		
+		for (int row = 0; row < pixels.length; row ++)
+		{
+			for (int col = 0; col < pixels[0].length; col++)
+			{
+				shiftedValue = (row + amount) % height;
+				copied[row][col].setColor(pixels[shiftedValue][col].getColor());
+			}
+		}
+		for (int row = 0; row < pixels.length; row++) 
+		{
+			for (int col = 0; col < pixels[0].length; col++)
+			{
+				pixels[row][col].setColor(copied[row][col].getColor());
+			}
+		}
+			
+	}
 	
 
 	/**

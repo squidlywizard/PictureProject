@@ -101,12 +101,19 @@ public class PictureTester
 	  //source.explore();
 	  background.explore();
   }
+  public static void testPictureShifter() 
+  {
+	  Picture pizza = new Picture("swan.jpg");
+	  pizza.shiftUpDown(2);
+	  pizza.explore();
+  }
  
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
   {
+	  testPictureShifter();
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
