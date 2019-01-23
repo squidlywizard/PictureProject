@@ -83,10 +83,10 @@ public class PictureTester
   public static void testglitch()
   {
 	  Picture miser = new Picture ("heatmiser.jpg");
-	  miser.zeroRed();
-	  for(int I = 10; I>0;I --) {
+	  //miser.zeroRed();
+	  //for(int I = 10; I>0;I --) {
 	  miser.glichy();
-	  }
+	 // }
 	  
 	  
 	

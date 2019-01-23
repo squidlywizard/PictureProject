@@ -146,7 +146,7 @@ public class Picture extends SimplePicture
 		
 
 		// loop through the rows
-		for (int row = 27; row < 97; row++)
+		for (int row = (int) (pixels.length  - (Math.random() * pixels.length - mirrorPoint)); row < 97; row++)
 		{
 			// loop from 13 to just before the mirror point
 			for (int col = 0; col < mirrorPoint; col++)
