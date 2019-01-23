@@ -135,8 +135,32 @@ public class Picture extends SimplePicture
 			}
 		}
 				}
-    Picture zalgoat = new Picture ("zalgo.jpg");
+    //Picture zalgoat = new Picture ("zalgo.jpg");
 	public void glichy()
+	{   
+		Pixel[][] pixels = this.getPixels2D();
+		//Pixel [][] zalgo1 = ("zalgo.jpg");
+		
+		int mirrorPoint = (int) (pixels.length/2 - (Math.random() * pixels.length / 2));
+		Pixel leftPixel = null;
+		Pixel rightPixel = null;
+
+		
+
+		// loop through the rows
+		for (int row = (int) (pixels.length  - (Math.random() * pixels.length )); row < pixels.length; row++)
+		{
+			// loop from 13 to just before the mirror point
+			for (int col = 0; col < mirrorPoint; col++)
+			{
+
+				leftPixel = pixels[row][col];
+				rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
+				rightPixel.setColor(leftPixel.getColor());
+			}
+		}
+	}
+	public void glichy2()
 	{   
 		Pixel[][] pixels = this.getPixels2D();
 		int mirrorPoint = (int) (pixels.length/2 - (Math.random() * pixels.length / 2));
@@ -146,7 +170,7 @@ public class Picture extends SimplePicture
 		
 
 		// loop through the rows
-		for (int row = (int) (pixels.length  - (Math.random() * pixels.length - mirrorPoint)); row < 97; row++)
+		for (int row = (int) (pixels.length  - (Math.random() * pixels.length )); row < pixels.length; row++)
 		{
 			// loop from 13 to just before the mirror point
 			for (int col = 0; col < mirrorPoint; col++)
@@ -154,7 +178,7 @@ public class Picture extends SimplePicture
 
 				leftPixel = pixels[row][col];
 				rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
-				rightPixel.setColor(leftPixel.getColor());
+				rightPixel.setGreen(leftPixel.getGreen());
 			}
 		}
 	}
