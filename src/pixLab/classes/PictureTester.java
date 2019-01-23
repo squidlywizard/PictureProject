@@ -82,8 +82,9 @@ public class PictureTester
   }
   public static void testglitch()
   {
-	  Picture miser = new Picture ("dominos.jpeg");
-	  for(int I = 100; I>0;I --) {
+	  Picture miser = new Picture ("heatmiser.jpg");
+	  miser.zeroRed();
+	  for(int I = 10; I>0;I --) {
 	  miser.glichy();
 	  }
 	  
@@ -113,11 +114,11 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
-	  testPictureShifter();
+	  //testPictureShifter();
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	  //testglitch();
+	 testglitch();
     //testZeroBlue();
 	//greenOnly();
     //testZeroRed();
@@ -138,7 +139,7 @@ public class PictureTester
     //testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
-    testChromakey();
+    //testChromakey();
     //testEncodeAndDecode();
     //testGetCountRedOverValue(250);
     //testSetRedToHalfValueInTopHalf();
