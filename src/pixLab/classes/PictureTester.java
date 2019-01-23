@@ -112,8 +112,11 @@ public class PictureTester
   }
  public static void testSteganography()
  {
-	 Picture thirdReich = new Picture("hitler.jpg");
-	 Picture Bone = new Picture("bbbbbbbones.jpg");
+	 Picture thirdReich = new Picture("hitler2.jpeg");
+	 Picture Bone = new Picture("bbbbbbbones.jpeg");
+	 Bone.hidePicture(thirdReich);
+	 Bone.revealPicture();
+	 Bone.explore();
  }
   
   /** Main method for testing.  Every class can have a main
@@ -124,7 +127,8 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	 testglitch();
+	// testglitch();
+	 testSteganography();
     //testZeroBlue();
 	//greenOnly();
     //testZeroRed();
