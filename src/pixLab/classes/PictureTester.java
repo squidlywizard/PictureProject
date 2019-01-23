@@ -110,7 +110,11 @@ public class PictureTester
 	  pizza.shiftUpDown(2);
 	  pizza.explore();
   }
- 
+ public static void testSteganography()
+ {
+	 Picture thirdReich = new Picture("hitler.jpg");
+	 Picture Bone = new Picture("bbbbbbbones.jpg");
+ }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
