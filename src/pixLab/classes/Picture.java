@@ -368,6 +368,34 @@ public class Picture extends SimplePicture
 		}
 
 	}
+	public void ZALGO(Picture zalgo) {
+		Pixel[][] pixels = this.getPixels2D();
+		Pixel[][] heComes = zalgo.getPixels2D();
+		Pixel thePixels = null;
+		Pixel zalgoat = null;
+		Boolean heMayCometh= false;
+		if(pixels.length >= heComes.length && pixels[0].length >= pixels[0].length)
+		{
+			heMayCometh = true;
+		}
+		if (heMayCometh)
+		{
+			
+			
+			for(int row = 0; row < heComes.length; row ++)
+			{
+				for(int col = 0; col < heComes[0].length; col++)
+				{
+			
+			thePixels = pixels[row][col];
+				zalgoat = heComes[row][col];
+	      	thePixels.setRed(zalgoat.getRed());
+				
+				
+			}
+			}
+	}
+	}
 
 	/**
 	 * copy from the passed fromPic to the specified startRow and startCol in the

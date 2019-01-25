@@ -82,13 +82,18 @@ public class PictureTester
   }
   public static void testglitch()
   {
-	  Picture miser = new Picture ("spurdo.jpg");
+	  Picture miser = new Picture ("heatmiser.jpg");
+	  Picture zalgo = new Picture ("zalgo.jpg");
 	
 	  miser.zeroRed();
 	  for(int I = 10; I>0;I --) {
-	  miser.glichy();
+	  miser.ZALGO(zalgo);
+		  miser.glichy();
 	  miser.glichy2();
+	  
 	  }
+	  miser.ZALGO(zalgo);
+	  //miser.mirrorVertical2();
 	  
 	  
 	
@@ -127,8 +132,8 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
-	// testglitch();
-	 testSteganography();
+	 testglitch();
+    //testSteganography();
     //testZeroBlue();
 	//greenOnly();
     //testZeroRed();
